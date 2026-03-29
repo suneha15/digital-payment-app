@@ -1,9 +1,11 @@
 const express = require("express");
-const userRouter = require("./user");
-
 const router = express.Router();
 
-router.use("/user",userRouter);
+const userRouter = require("./user");
+
+console.log("🔥 Root router loaded");
+
+router.use("/user", userRouter);
 
 module.exports = router;
 /*all request would look like -
